@@ -1,7 +1,13 @@
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
 export default function Investment() {
+  const sectionRef = useScrollReveal("animate-slideUp");
+
   return (
-    <section className="bg-gray-100 py-16 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-6">
+    <section ref={sectionRef} className="bg-gray-100 py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold mb-6 flex items-center justify-center gap-3">
+                  <img src="/icons/profit.png" alt="profit icon" className="w-12 h-12" />
+
         Investment Opportunity
       </h2>
 

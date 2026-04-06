@@ -1,7 +1,13 @@
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
 export default function Sustainability() {
+  const sectionRef = useScrollReveal("animate-slideUp");
+
   return (
-    <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-6">
+    <section ref={sectionRef} className="py-16 px-6 max-w-5xl mx-auto text-center">
+      <h2 className="text-3xl font-bold mb-6 flex items-center justify-center gap-3">
+                  <img src="/icons/accountability.png" alt="info icon" className="w-12 h-12" />
+
         Sustainability & Accountability
       </h2>
 

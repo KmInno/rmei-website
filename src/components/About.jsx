@@ -1,21 +1,26 @@
 import { Link } from "react-router-dom";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
+  const titleRef = useScrollReveal("animate-slideUp");
+
   return (
-    <section className="py-16 px-6 bg-white text-center">
+    <section ref={titleRef} className="py-16 px-6 bg-white text-center">
       <div className="max-w-4xl mx-auto">
 
-        <h2 className="text-3xl font-bold mb-6 text-blue-900">
+        <h2 className="text-3xl font-bold mb-6 text-blue-900 flex items-center justify-center gap-2">
+          <img src="/icons/info.png" alt="info icon" className="w-10 h-10" />
           About the Initiative
         </h2>
 
         <p className="text-gray-700 mb-4">
-          The Return Missionary Entrepreneur Initiative (RMEI) empowers returned missionaries 
+          The Return Missionary Entrepreneur Initiative (RMEI) empowers returned missionaries
           in Uganda to become entrepreneurs and job creators.
         </p>
 
         <p className="text-gray-600 mb-6">
-          Through training, mentorship, and funding, the program helps participants 
+          Through training, mentorship, and funding, the program helps participants
           build sustainable businesses and contribute to economic growth.
         </p>
 

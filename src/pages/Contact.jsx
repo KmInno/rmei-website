@@ -1,15 +1,19 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Contact() {
+  const titleRef = useScrollReveal("animate-slideUp");
+  const formRef = useScrollReveal("animate-slideUp200");
+
   return (
     <>
       <Navbar />
 
       <section className="py-16 px-6 max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
+        <h1 ref={titleRef} className="text-3xl font-bold mb-6 opacity-0">Contact Us</h1>
 
-        <form className="flex flex-col gap-4">
+        <form ref={formRef} className="flex flex-col gap-4 opacity-0">
           <input
             type="text"
             placeholder="Your Name"

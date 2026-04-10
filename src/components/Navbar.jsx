@@ -9,7 +9,6 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-bold">RMEI</h2>
 
-        {/* Hamburger button - mobile only */}
         <button
           className="md:hidden flex flex-col gap-1.5"
           onClick={() => setIsOpen(!isOpen)}
@@ -19,7 +18,6 @@ export default function Navbar() {
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
 
-        {/* Desktop menu */}
         <ul className="hidden md:flex gap-6">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
@@ -29,7 +27,6 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 mt-4 pb-2">
           <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
@@ -41,4 +38,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-}hu
+}

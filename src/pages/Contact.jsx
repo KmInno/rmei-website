@@ -11,31 +11,35 @@ export default function Contact() {
       <Navbar />
 
       <section className="py-16 px-6 max-w-3xl mx-auto">
-        <h1 ref={titleRef} className="text-3xl font-bold mb-6 opacity-0">Contact Us</h1>
+        <div className="container px-6 bg-gray-100 py-10 rounded-lg max-w-7xl mx-auto shadow-lg shadow-black/50">
 
-        <form ref={formRef} className="flex flex-col gap-4 opacity-0">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="p-3 border rounded"
-          />
+          <h1 ref={titleRef} className="text-3xl font-bold mb-6 opacity-0">Contact Us</h1>
 
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="p-3 border rounded"
-          />
+          <form ref={formRef} className="flex flex-col gap-4 opacity-0">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="p-3 border rounded"
+            />
 
-          <textarea
-            placeholder="Your Message"
-            className="p-3 border rounded"
-            rows="5"
-          />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="p-3 border rounded"
+            />
 
-          <button className="bg-blue-900 text-white py-3 rounded">
-            Send Message
-          </button>
-        </form>
+            <textarea
+              placeholder="Your Message"
+              className="p-3 border rounded"
+              rows="5"
+            />
+
+            <button className="bg-blue-900 text-white py-3 rounded">
+              Send Message
+            </button>
+          </form>
+        </div>
+
       </section>
 
       <Footer />

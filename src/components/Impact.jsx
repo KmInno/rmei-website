@@ -15,7 +15,7 @@ export default function Impact() {
         Our Expected Impact
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className=" container grid md:grid-cols-3 gap-8 shadow-lg shadow-blue/50">
         <div ref={card1Ref} className="opacity-0">
           <h3 className="text-4xl font-bold text-yellow-400">
             {content.impact[0].number}

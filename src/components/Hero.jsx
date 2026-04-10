@@ -19,7 +19,7 @@ export default function Hero() {
       {content.hero.subtitle}
     </p>
 
-    <button className="bg-yellow-500 px-6 py-3 rounded-lg animate-slideUp400">
+    <button className="bg-yellow-500 px-6 py-3 rounded-lg animate-slideUp400" onClick={() => window.location.href = "/contact"}>
       Donate Now
     </button>
   </div>

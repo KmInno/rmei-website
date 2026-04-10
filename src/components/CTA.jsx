@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section
       ref={fadein}
-      className="relative text-white py-16 px-6 text-center bg-cover bg-center"
+      className="relative text-white py-16 px-6 text-center bg-cover bg-center shadow-lg shadow-blue/5"
       style={{ backgroundImage: "url('/images/together.jpg')" }}
     >
 
@@ -22,7 +22,7 @@ export default function CTA() {
           lasting economic change in Uganda.
         </p>
 
-        <button className="bg-blue-900 hover:bg-blue-800 px-8 py-3 rounded-lg shadow">
+        <button className="bg-blue-900 hover:bg-blue-800 px-8 py-3 rounded-lg shadow" onClick={() => window.location.href = "/contact"}>
           Support This Initiative
         </button>
       </div>

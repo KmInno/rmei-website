@@ -12,16 +12,22 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Problem />
-      <Program />
-      <Impact />
-      <Sustainability />
-      <Investment />
-      <CTA />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          <Hero />
+          <About />
+          <Problem />
+          <Program />
+          <Impact />
+          <Sustainability />
+          <Investment />
+          <CTA />
+        </main>
+
+        <Footer />
+      </div>
+
     </>
   );
 }

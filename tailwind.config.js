@@ -54,6 +54,20 @@ export default {
         "hero": "url('/images/hero-image.webp')",
 
       },
+
+      width: {
+        '500': '300px',
+      },
+      height: {
+        '500': '300px',
+      },
+      width: {
+        '500': '500px',
+      },
+      height: {
+        '500': '500px',
+      },
+
       plugins: [],
     }
   },

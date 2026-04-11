@@ -45,6 +45,23 @@ export default function About() {
 
         {/* Vision & Goal */}
         <div ref={gridRef} className="flex flex-col gap-6 mt-10 opacity-0">
+          <div className="flex-1 bg-gray-100 p-6 rounded-lg flex flex-col md:flex-row items-center gap-4 shadow-lg shadow-black/50">
+
+            <div>
+              <h2 className="text-xl font-semibold mb-2 text-black text-center">
+                Biography
+              </h2>
+              <p className="text-black text-center">
+                The REMEI was founded by Kenneth Lubuulwa, a return missionary from Zambia Lusaka mission 2023-2025 and service missionary at Byupathway worldwide 2026-2027.
+              </p>
+            </div>
+            <img
+              src="/images/ken-port.webp"
+              alt="hero-2 image"
+              className="md:w-300 md:h-300 object-cover rounded flex-shrink-0 w-500 h-500"
+            />
+          </div>
+
 
           <div className="flex-1 bg-gray-100 p-6 rounded-lg flex flex-col md:flex-row items-center gap-4 shadow-lg shadow-black/50">
             <img

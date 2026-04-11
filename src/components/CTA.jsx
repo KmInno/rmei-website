@@ -21,6 +21,11 @@ export default function CTA() {
           Join us in empowering the next generation of entrepreneurs and creating
           lasting economic change in Uganda.
         </p>
+        <p className="mb-6 text-lg max-w-2xl mx-auto">
+          "By small and simple things are great things brought to pass."
+          Alma 37:6
+        </p>
+
 
         <button className="bg-blue-900 hover:bg-blue-800 px-8 py-3 rounded-lg shadow" onClick={() => window.location.href = "/contact"}>
           Support This Initiative

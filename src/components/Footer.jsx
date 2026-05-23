@@ -1,11 +1,11 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const quickLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Our Impact", href: "#impact" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Our Impact", href: "/impact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const supportLinks = [

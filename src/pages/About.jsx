@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Team from "../components/Team";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function About() {
@@ -97,6 +98,8 @@ export default function About() {
               className="md:w-300 md:h-300 object-cover rounded flex-shrink-0 order-1 md:order-2 w-500 h-500"
             />
           </div>
+
+          <Team />
 
         </div>
 

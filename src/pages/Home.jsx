@@ -7,6 +7,7 @@ import Impact from "../components/Impact";
 import Sustainability from "../components/Sustainability";
 import Investment from "../components/Investment";
 import CTA from "../components/CTA";
+import Team from "../components/Team";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
           <Impact />
           <Sustainability />
           <Investment />
+          <Team />
           <CTA />
         </main>
 

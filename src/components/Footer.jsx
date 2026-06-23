@@ -1,11 +1,19 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const quickLinks = [
+<<<<<<< HEAD
   { label: "Home", href: "#" },
   { label: "About Us", href: "#about" },
   { label: "Programs", href: "#programs" },
   { label: "Our Impact", href: "#impact" },
   { label: "Contact Us", href: "#contact" },
+=======
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "Our Impact", href: "/impact" },
+  { label: "Contact Us", href: "/contact" },
+>>>>>>> 3219cef79871ed491c5e1b6ecc46235578679315
 ];
 
 const supportLinks = [
@@ -170,7 +178,11 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wider text-neutral-600 mb-1">Telephone</p>
+<<<<<<< HEAD
                 <p className="text-sm text-neutral-400">+256 77211 3151</p>
+=======
+                <p className="text-sm text-neutral-400">+256 772 211 3151</p>
+>>>>>>> 3219cef79871ed491c5e1b6ecc46235578679315
               </div>
             </div>
           </div>

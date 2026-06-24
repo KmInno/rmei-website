@@ -9,9 +9,5 @@ export default defineConfig({
       hostname: 'https://www.rmeiug.org',
     }),
   ],
-  preview: {
-    host: '0.0.0.0',
-    port: process.env.PORT || 4173,
-    allowedHosts: ['rmei-website.onrender.com', 'localhost'],
-  },
+
 })

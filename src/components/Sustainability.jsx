@@ -1,38 +1,85 @@
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { 
+  ShieldCheckIcon, 
+  ChartBarSquareIcon, 
+  ArrowPathRoundedSquareIcon,
+  CheckBadgeIcon
+} from "@heroicons/react/24/outline";
 
 export default function Sustainability() {
-  const sectionRef = useScrollReveal("animate-slideUp");
+  const headerRef = useScrollReveal("animate-slideUp");
+  const gridRef = useScrollReveal("animate-slideUp200");
 
   return (
-    <section ref={sectionRef} className="py-16 px-6 max-w-5xl mx-auto text-center">
-      <div className="container px-6 bg-white py-10 rounded-lg max-w-7xl mx-auto shadow-lg shadow-black/50">
+    <section className="py-24 px-5 bg-slate-50 flex justify-center">
+      <div className="max-w-6xl w-full">
+        
+        {/* Header Section */}
+        <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center justify-center p-4 bg-teal-100 rounded-full mb-6">
+            {/* Shield icon visually communicates trust and accountability */}
+            <ShieldCheckIcon className="w-10 h-10 text-teal-600" strokeWidth={1.5} />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Sustainability & Accountability
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            We are committed to long-term impact. Our initiative is built on transparent monitoring 
+            systems and self-sustaining funding models to ensure every contribution creates lasting value.
+          </p>
+        </div>
 
-        <h2 className="text-3xl font-bold mb-6 flex items-center justify-center gap-3">
-          <img src="/icons/accountability.png" alt="info icon" className="w-12 h-12" />
+        {/* Two-Column Card Layout */}
+        <div ref={gridRef} className="grid md:grid-cols-2 gap-8 lg:gap-10">
+          
+          {/* Card 1: Accountability / Monitoring */}
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg shadow-gray-200/50 border border-gray-100 transition-transform duration-300 hover:-translate-y-1">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="bg-blue-50 p-3 rounded-xl text-blue-600">
+                <ChartBarSquareIcon className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Measuring Impact</h3>
+            </div>
+            
+            <ul className="space-y-5">
+              {[
+                "Tracking real-time business performance and job creation",
+                "Measuring baseline vs. actual revenue growth",
+                "Monitoring 12–24 month business survival rates",
+                "Providing transparent quarterly evaluations and reports"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3 text-gray-700">
+                  <CheckBadgeIcon className="w-6 h-6 text-blue-500 shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          Sustainability & Accountability
-        </h2>
+          {/* Card 2: Sustainability Strategy */}
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg shadow-gray-200/50 border border-gray-100 transition-transform duration-300 hover:-translate-y-1">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="bg-teal-50 p-3 rounded-xl text-teal-600">
+                <ArrowPathRoundedSquareIcon className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Future Sustainability</h3>
+            </div>
+            
+            <ul className="space-y-5">
+              {[
+                "Revolving loan funds to continuously support new cohorts",
+                "Alumni program requiring give-back mentorship and contributions",
+                "Strategic partnerships with the private sector and business leaders",
+                "Generating internal revenue through specialized training programs"
+              ].map((item, index) => (
+                <li key={index} className="flex items-start gap-3 text-gray-700">
+                  <CheckBadgeIcon className="w-6 h-6 text-teal-500 shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <p className="mb-6 text-gray-700">
-          The initiative is designed for long-term impact through strong monitoring
-          systems and sustainable funding strategies.
-        </p>
-
-        <ul className="text-left max-w-2xl mx-auto list-disc space-y-2 text-gray-700">
-          <li>Tracking business performance and job creation</li>
-          <li>Measuring revenue growth of supported businesses</li>
-          <li>Monitoring business survival rates after 12–24 months</li>
-          <li>Quarterly evaluation and reporting</li>
-        </ul>
-
-        <div className="mt-8">
-          <h3 className="font-bold mb-2">Sustainability Strategy</h3>
-          <ul className="text-left max-w-2xl mx-auto list-disc space-y-2 text-gray-700">
-            <li>Alumni contributions and mentorship</li>
-            <li>Revolving loan fund to support future entrepreneurs</li>
-            <li>Partnerships with private sector and LDS entrepreneurs</li>
-            <li>Revenue from training programs</li>
-          </ul>
         </div>
       </div>
     </section>

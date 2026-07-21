@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const quickLinks = [
@@ -64,53 +65,55 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className="bg-black text-white opacity-0"
+      className="bg-black text-white"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
-      <div className="px-8 pt-16 pb-0 border-t border-neutral-900">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-neutral-900">
+      <div className="max-w-7xl mx-auto px-8 pt-20 pb-0 border-t border-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-neutral-900">
 
           {/* Col 1 — Brand + About + Socials */}
-          <div>
-            <h2 className="text-xl font-bold text-white leading-snug mb-3">
+          <div className="space-y-4">
+            <h2 className="text-xl font-bold text-white leading-snug">
               Return Missionary<br />Entrepreneur Initiative
             </h2>
-            <p className="text-sm text-neutral-500 leading-relaxed mb-6">
+            <p className="text-sm text-neutral-400 leading-relaxed">
               Empowering returned missionaries through entrepreneurship,
               mentorship, and community-driven impact across Uganda and beyond.
             </p>
-            <p className="text-xs uppercase tracking-widest text-yellow-600 mb-3">
-              Follow Us
-            </p>
-            <div className="flex gap-2">
-              {socials.map((s) => (
-                <a
-                  key={s.title}
-                  href={s.href}
-                  title={s.title}
-                  className="w-9 h-9 flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-950 text-neutral-500 hover:border-yellow-600 hover:text-yellow-500 transition-colors duration-200"
-                >
-                  {s.icon}
-                </a>
-              ))}
+            <div>
+              <p className="text-xs uppercase tracking-widest text-yellow-500 font-semibold mb-3">
+                Follow Us
+              </p>
+              <div className="flex gap-2">
+                {socials.map((s) => (
+                  <a
+                    key={s.title}
+                    href={s.href}
+                    title={s.title}
+                    className="w-10 h-10 flex items-center justify-center rounded-lg border border-neutral-800 bg-neutral-950 text-neutral-400 hover:border-yellow-500 hover:text-yellow-400 transition-colors duration-200"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Col 2 — Quick Links */}
+          {/* Col 2 — Quick Links (Using Router Links) */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-yellow-600 mb-5">
+            <h4 className="text-xs uppercase tracking-widest text-yellow-500 font-semibold mb-6">
               Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-neutral-500 hover:text-yellow-500 flex items-center gap-2 transition-colors duration-200 group"
+                  <Link
+                    to={link.href}
+                    className="text-sm text-neutral-400 hover:text-yellow-400 flex items-center gap-2.5 transition-colors duration-200 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-yellow-600 opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/50 group-hover:bg-yellow-400 transition-colors" />
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,17 +121,17 @@ export default function Footer() {
 
           {/* Col 3 — Support */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-yellow-600 mb-5">
+            <h4 className="text-xs uppercase tracking-widest text-yellow-500 font-semibold mb-6">
               Support
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3.5">
               {supportLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-neutral-500 hover:text-yellow-500 flex items-center gap-2 transition-colors duration-200 group"
+                    className="text-sm text-neutral-400 hover:text-yellow-400 flex items-center gap-2.5 transition-colors duration-200 group"
                   >
-                    <span className="w-1 h-1 rounded-full bg-yellow-600 opacity-50 group-hover:opacity-100 transition-opacity" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/50 group-hover:bg-yellow-400 transition-colors" />
                     {link.label}
                   </a>
                 </li>
@@ -138,39 +141,41 @@ export default function Footer() {
 
           {/* Col 4 — Contact Info */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-yellow-600 mb-5">
+            <h4 className="text-xs uppercase tracking-widest text-yellow-500 font-semibold mb-6">
               Contact Us
             </h4>
 
-            <div className="flex items-start gap-3 mb-4">
-              <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
-                📍
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
+                  📍
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-neutral-500 mb-0.5">Address</p>
+                  <p className="text-sm text-neutral-300 leading-relaxed">
+                    Kansanga, Kiwafu Zone<br />Kampala, Uganda
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs uppercase tracking-wider text-neutral-600 mb-1">Address</p>
-                <p className="text-sm text-neutral-400 leading-relaxed">
-                  Kansanga, Kiwafu Zone<br />Kampala, Uganda
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-3 mb-4">
-              <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
-                ✉️
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
+                  ✉️
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-neutral-500 mb-0.5">Email</p>
+                  <p className="text-sm text-neutral-300">kennethlubuulwa1820@gmail.com</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs uppercase tracking-wider text-neutral-600 mb-1">Email</p>
-                <p className="text-sm text-neutral-400">kennethlubuulwa1820@gmail.com</p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-3">
-              <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
-                📞
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-wider text-neutral-600 mb-1">Telephone</p>
-                <p className="text-sm text-neutral-400">+256 77211 3151</p>
+              <div className="flex items-start gap-3">
+                <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-sm">
+                  📞
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-neutral-500 mb-0.5">Telephone</p>
+                  <p className="text-sm text-neutral-300">+256 77211 3151</p>
+                </div>
               </div>
             </div>
           </div>
@@ -178,11 +183,13 @@ export default function Footer() {
         </div>
 
         {/* Copyright bar */}
-        <div className="py-5 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-neutral-600">
+        <div className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-neutral-500">
             © {new Date().getFullYear()} RMEI — Return Missionary Entrepreneur Initiative. All rights reserved.
           </p>
-          <span className="text-xs text-neutral-700">Built with purpose 🌍</span>
+          <span className="text-xs text-neutral-400 flex items-center gap-1">
+            Built with purpose <span className="text-base">🇺🇬</span>
+          </span>
         </div>
       </div>
     </footer>

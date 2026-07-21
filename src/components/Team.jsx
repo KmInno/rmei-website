@@ -1,3 +1,5 @@
+import { useScrollReveal } from "../hooks/useScrollReveal";
+
 const teamMembers = [
   {
     id: 1,
@@ -26,46 +28,54 @@ const teamMembers = [
 ];
 
 export default function Team() {
-  return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-gray-900">
-            Meet Our Team
-          </h2>
+  const headerRef = useScrollReveal("animate-slideUp");
+  const gridRef = useScrollReveal("animate-slideUp200");
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Meet the dedicated leaders who guide and support our mission.
+  return (
+    <section className="py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-5">
+        
+        {/* Heading */}
+        <div ref={headerRef} className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Meet Our Leadership
+          </h2>
+          <div className="w-16 h-1 bg-yellow-500 mx-auto mt-4 mb-6 rounded-full"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            The dedicated team guiding our mission to empower returning missionaries 
+            and foster sustainable economic growth across Uganda.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div ref={gridRef} className="grid gap-8 md:grid-cols-3">
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 text-center"
+              className="group bg-white rounded-3xl p-8 lg:p-10 shadow-lg shadow-gray-200/50 border border-gray-100 hover:-translate-y-2 transition-transform duration-300 text-center"
             >
-              {/* Profile Image */}
-              <div className="flex justify-center">
+              {/* Profile Image Container */}
+              <div className="flex justify-center mb-6 relative">
+                {/* Decorative background blur that activates on hover */}
+                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                
                 <img
                   src={member.image}
-                  alt={member.name}
-                  className="w-36 h-36 rounded-full object-cover border-4 border-blue-500"
+                  alt={`Portrait of ${member.name}`}
+                  className="relative z-10 w-40 h-40 rounded-full object-cover object-center ring-4 ring-blue-50 group-hover:ring-blue-100 transition-all duration-300"
                 />
               </div>
 
               {/* Info */}
-              <h3 className="mt-6 text-xl font-bold text-gray-900">
+              <h3 className="text-2xl font-bold text-gray-900 mb-1">
                 {member.name}
               </h3>
 
-              <p className="text-blue-600 font-semibold mt-1">
+              <p className="text-sm font-bold text-blue-600 uppercase tracking-wider mb-4">
                 {member.position}
               </p>
 
-              <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 leading-relaxed">
                 {member.description}
               </p>
             </div>

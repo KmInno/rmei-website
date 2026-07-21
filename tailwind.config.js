@@ -16,38 +16,38 @@ export default {
     extend: {
       keyframes: {
         fadeIn: {
-          "0%": { opacity: 0, transform: "translateY(20px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
+          "0%": { opacity: 0, transform: "translate3d(0, 14px, 0)" },
+          "100%": { opacity: 1, transform: "translate3d(0, 0, 0)" },
         },
 
         slideUp: {
-          "0%": { opacity: 0, transform: "translateY(40px)" },
-          "100%": { opacity: 1, transform: "translateY(0)" },
+          "0%": { opacity: 0, transform: "translate3d(0, 24px, 0)" },
+          "100%": { opacity: 1, transform: "translate3d(0, 0, 0)" },
         },
 
         slideLeft: {
-          "0%": { opacity: 0, transform: "translateX(40px)" },
-          "100%": { opacity: 1, transform: "translateX(0)" },
+          "0%": { opacity: 0, transform: "translate3d(24px, 0, 0)" },
+          "100%": { opacity: 1, transform: "translate3d(0, 0, 0)" },
         },
 
         slideRight: {
-          "0%": { opacity: 0, transform: "translateX(-40px)" },
-          "100%": { opacity: 1, transform: "translateX(0)" },
+          "0%": { opacity: 0, transform: "translate3d(-24px, 0, 0)" },
+          "100%": { opacity: 1, transform: "translate3d(0, 0, 0)" },
         },
       },
 
       animation: {
-        fadeIn: "fadeIn 0.8s ease-out forwards",
-        fadeIn200: "fadeIn 0.8s ease-out 0.2s forwards",
-        fadeIn400: "fadeIn 0.8s ease-out 0.4s forwards",
-        fadeIn600: "fadeIn 0.8s ease-out 0.6s forwards",
+        fadeIn: "fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        fadeIn200: "fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards",
+        fadeIn400: "fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards",
+        fadeIn600: "fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards",
 
-        slideUp: "slideUp 0.8s ease-out forwards",
-        slideUp200: "slideUp 0.8s ease-out 0.2s forwards",
-        slideUp400: "slideUp 0.8s ease-out 0.4s forwards",
+        slideUp: "slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        slideUp200: "slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards",
+        slideUp400: "slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards",
 
-        slideLeft: "slideLeft 0.8s ease-out forwards",
-        slideRight: "slideRight 0.8s ease-out forwards",
+        slideLeft: "slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        slideRight: "slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards",
       },
 
       backgroundImage: {
